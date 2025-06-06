@@ -13,9 +13,14 @@ This project implements an LSTM-based emotion detection model and deploys it as 
 │   ├── emotions.json
 │   ├── emotion_mapping.json
 │   └── tokenizer.json
-├── main.py             # FastAPI application entry point
+├── emotion_api/
+│   ├── main.py
+│   └── __pycache__/
+├── src/
+│   └── (source code files)
+├── emotion_env/        # Local Python virtual environment
 ├── requirements.txt    # Project dependencies
-└── emotion_env/        # Local Python virtual environment
+└── .gitignore         # Git ignore file
 ```
 
 ## Setup Instructions
@@ -145,8 +150,7 @@ This section outlines the manual steps we followed to deploy the FastAPI applica
 
         [Install]
         WantedBy=multi-user.target
-        ```
-    *   Save and exit (`Ctrl + X`, `Y`, `Enter`).
+        ```    *   Save and exit (`Ctrl + X`, `Y`, `Enter`).
 
 9.  **Reload systemd, enable, and start the service**:
     ```bash
